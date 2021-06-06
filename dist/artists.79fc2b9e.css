@@ -217,7 +217,7 @@ a:focus {
 	}
 }
 
-@media  screen and (max-width: 768px) {
+@media  screen and (max-width: 1024px) {
 	.content {
 		width: 100%;
 		height: 100%;
@@ -279,13 +279,13 @@ a:focus {
 	}
 	
 	.pos-10 {
-		--grid-row: 163;
+		--grid-row: 134;
 		--grid-column: 24;
 	}
 	
 	.pos-11 {
-		--grid-row: 137;
-		--grid-column: 27;
+		--grid-row: 161;
+		--grid-column: 29;
 	}
 	
 	.pos-12 {
@@ -331,6 +331,13 @@ a:focus {
 		color: #FFB800;
 		text-transform: uppercase;
 		font-family: drukwide;
+	}
+	@media  screen and (max-width: 1024px) {
+		.cursor__text {
+			top: 10px;
+			left: 80px;
+			font-size: 40px;
+		}
 	}
 }
 /* Recommended styles for Splitting */
