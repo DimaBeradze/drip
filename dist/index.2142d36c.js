@@ -1122,9 +1122,6 @@ class Intro {
     }, 'start+=2');
   }
   enter() {
-    setTimeout(() => {
-      window.history.pushState({}, '', 'artists.html');
-    }, 1500);
     this.startTL.kill();
     _gsap.gsap.set(DOM.enterCtrl, {
       pointerEvents: 'none'
@@ -1145,6 +1142,11 @@ class Intro {
         amount: -0.4
       }
     }, 'start');
+    setTimeout(() => {
+      _gsap.gsap.set(this.DOM.circleText[1], {
+        display: 'none'
+      });
+    }, 700);
   }
 }
 

@@ -341,3 +341,53 @@ a:focus {
 		}
 	}
 }
+
+@media (any-pointer: coarse) {
+	.cursor {
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		pointer-events: none;
+		z-index: 9999;
+		cursor: none;
+	}
+
+	.cursor__svg {
+		pointer-events: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		cursor: none;
+	}
+
+	.cursor__svg-circle {
+		fill: var(--cursor-fill);
+	}
+
+	.cursor__text {
+		position: absolute;
+		color: #FFB800;
+		text-transform: uppercase;
+		font-family: drukwide;
+	}
+	@media  screen and (max-width: 1024px) {
+		.cursor__text {
+			font-size: 40px;
+		}
+	}
+	@media  screen and (max-width: 768px) {
+		.cursor__text {
+			font-size: 24px;
+		}
+	}
+	@media  screen and (max-width: 375px) {
+		.cursor__text {
+			left: -30px;
+			top: -30px;
+			font-size: 18px;
+		}
+	}
+}

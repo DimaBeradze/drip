@@ -96,9 +96,6 @@ export class Intro {
         }, 'start+=2');
     }
     enter() {
-        setTimeout(() => {
-            window.history.pushState({}, '', 'artists.html');
-        }, 1500)
         this.startTL.kill();
         
         gsap.set(DOM.enterCtrl, {pointerEvents: 'none'});
@@ -122,6 +119,8 @@ export class Intro {
                 amount: -0.4
             }
         }, 'start')
+        setTimeout(() => {
+            gsap.set(this.DOM.circleText[1], {display: 'none'});
+        },700)
     }
-
 }
