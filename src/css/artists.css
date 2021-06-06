@@ -1,0 +1,335 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+:root {
+	font-size: 18px;
+}
+
+@font-face {
+	font-family: drukwide;
+	src: url(../fonts/DrukWide-Medium.ttf);
+}
+
+html, 
+body, 
+main {
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+
+body {
+	margin: 0;
+	--color-text: #000;
+	--color-text-alt: #848484;
+	--color-title: #d3d3d3;
+    --color-bg: #000000;
+    --color-link: #E3154D;
+	--color-link-hover: #000;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    --cursor-fill: none;
+    --cursor-text: #000;
+	font-family: tenon, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a {
+	text-decoration: underline;
+	color: var(--color-link);
+	outline: none;
+}
+
+a:hover,
+a:focus {
+	text-decoration: none;
+	color: var(--color-link-hover);
+	outline: none;
+}
+
+/* Page Loader */
+.js .loading::before,
+.js .loading::after {
+	content: '';
+	position: fixed;
+	z-index: 1000;
+}
+
+.js .loading::before {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: var(--color-bg);
+}
+
+.js .loading::after {
+	top: 50%;
+	left: 50%;
+	width: 60px;
+	height: 60px;
+	margin: -30px 0 0 -30px;
+	border-radius: 50%;
+	opacity: 0.4;
+	background: var(--color-link);
+	animation: loaderAnim 0.7s linear infinite alternate forwards;
+
+}
+
+@keyframes loaderAnim {
+	to {
+		opacity: 1;
+		transform: scale3d(0.5,0.5,1);
+	}
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	height: 300px;
+	justify-content: center;
+	position: relative;
+	align-items: center;
+}
+
+.grid {
+	position: absolute;
+	width: 120%;
+    height: 120%;
+    top: -10%;
+    left: -10%;
+	display: grid;
+	grid-template-columns: repeat(50,2%);
+	grid-template-rows: repeat(50,2%);
+	perspective: 1000px;
+}
+
+.grid--inactive {
+	pointer-events: none;
+}
+
+.grid__item {
+	position: relative;
+	will-change: transform;
+	grid-area: var(--grid-row) / var(--grid-column) / span 20 / span 8	;
+}
+
+.grid__item-img {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: 50% 50%;
+	border-radius: 10px;
+	will-change: transform;
+}
+
+
+/* Shorthand grid-area: grid-row-start / grid-column-start / grid-row-end / grid-column-end */
+.pos-1 {
+	--grid-row: 6;
+	--grid-column: 5;
+}
+
+.pos-2 {
+	--grid-row: 1;
+	--grid-column: 14;
+}
+
+.pos-3 {
+	--grid-row: 1;
+	--grid-column: 26;
+}
+
+.pos-4 {
+	--grid-row: 13;
+	--grid-column: 11;
+}
+
+.pos-5 {
+	--grid-row: 33;
+	--grid-column: 35;
+}
+
+.pos-6 {
+	--grid-row: 22;
+	--grid-column: 39;
+}
+
+.pos-7 {
+	--grid-row: 22;
+	--grid-column: 3;
+}
+
+.pos-8 {
+	--grid-row: 31;
+	--grid-column: 8;
+}
+
+.pos-9 {
+	--grid-row: 15;
+    --grid-column: 31;
+}
+
+.pos-10 {
+	--grid-row: 30;
+	--grid-column: 16;
+}
+
+.pos-11 {
+	--grid-row: 3;
+	--grid-column: 35;
+}
+
+.pos-12 {
+	--grid-row: 32;
+	--grid-column: 27;
+}
+
+.content__title {
+	font-size: 12vw;
+	margin: 0;
+	line-height: 1.2;
+	position: relative;
+	color: var(--color-title);
+	text-transform: uppercase;
+	pointer-events: none;
+}
+
+.cursor {
+	display: none;
+}
+
+@media screen and (min-width: 53em) {
+	html, 
+	body, 
+	main {
+		overflow: hidden;
+	}
+	.content {
+		height: 100%;
+	}
+}
+
+@media  screen and (max-width: 768px) {
+	.content {
+		width: 100%;
+		height: 100%;
+	}
+	.grid {
+		grid-template-columns: repeat(50,2%);
+		grid-template-rows: repeat(200,0.5%);
+	}
+
+	.grid__item {
+		position: relative;
+		will-change: transform;
+		grid-area: var(--grid-row) / var(--grid-column) / span 40 / span 20	;
+	}
+
+	.pos-1 {
+		--grid-row: 28;
+		--grid-column: 2;
+	}
+	
+	.pos-2 {
+		--grid-row: 1;
+		--grid-column: 15;
+	}
+	
+	.pos-3 {
+		--grid-row: 66;
+		--grid-column: 31;
+	}
+	
+	.pos-4 {
+		--grid-row: 52;
+		--grid-column: 16;
+	}
+	
+	.pos-5 {
+		--grid-row: 109;
+		--grid-column: 30;
+	}
+	
+	.pos-6 {
+		--grid-row: 64;
+		--grid-column: 1;
+	}
+	
+	.pos-7 {
+		--grid-row: 124;
+		--grid-column: 2;
+	}
+	
+	.pos-8 {
+		--grid-row: 95;
+		--grid-column: 12;
+	}
+	
+	.pos-9 {
+		--grid-row: 156;
+		--grid-column: 6;
+	}
+	
+	.pos-10 {
+		--grid-row: 163;
+		--grid-column: 24;
+	}
+	
+	.pos-11 {
+		--grid-row: 137;
+		--grid-column: 27;
+	}
+	
+	.pos-12 {
+		--grid-row: 17;
+		--grid-column: 31;
+	}
+}
+
+
+:root {
+	cursor: url("../img/icons/dripfav2.png"), none;
+}
+
+@media (any-pointer: fine) {
+	.cursor {
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		pointer-events: none;
+		z-index: 9999;
+		cursor: none;
+	}
+
+	.cursor__svg {
+		pointer-events: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		cursor: none;
+	}
+
+	.cursor__svg-circle {
+		fill: var(--cursor-fill);
+	}
+
+	.cursor__text {
+		position: absolute;
+		top: 10px;
+		left: 80px;
+		font-size: 72px;
+		color: #FFB800;
+		text-transform: uppercase;
+		font-family: drukwide;
+	}
+}
