@@ -1,2 +1,1 @@
 DRIP
-Digital Ocean
