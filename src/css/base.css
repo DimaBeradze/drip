@@ -220,7 +220,7 @@ a:focus-visible {
 .circles {
 	pointer-events: none;
 	position: fixed;
-	 --dim: 186vmin;
+	 --dim: 156vmin;
 	width: var(--dim);
 	height: var(--dim);
 	top: calc(50% - var(--dim) / 2 );
