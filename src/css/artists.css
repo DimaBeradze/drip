@@ -239,8 +239,6 @@ a:focus {
 	text-transform: uppercase;
 	white-space: nowrap;
 }
-
-
 @keyframes marquee {
     0% {
         transform: translate3d(0%, 0, 0);
@@ -433,6 +431,9 @@ a:focus {
 			left: -30px;
 			top: -30px;
 			font-size: 18px;
+		}
+		.bottom {
+			bottom: 20px;
 		}
 	}
 }

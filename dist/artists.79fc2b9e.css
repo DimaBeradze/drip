@@ -432,6 +432,9 @@ a:focus {
 			top: -30px;
 			font-size: 18px;
 		}
+		.bottom {
+			bottom: 20px;
+		}
 	}
 }
 /* Recommended styles for Splitting */
