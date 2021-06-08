@@ -206,6 +206,19 @@ a:focus {
 	display: none;
 }
 
+.marquee {
+	color: #B4EE10;
+	font-size: 20px;
+	font-family: drukwide;
+	text-transform: uppercase;
+	white-space: nowrap;
+}
+
+.bottom {
+	position: absolute;
+	bottom: -4px;
+}
+
 @media screen and (min-width: 53em) {
 	html, 
 	body, 
