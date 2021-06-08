@@ -422,7 +422,7 @@ a:focus {
 	}
 	@media  screen and (max-width: 375px) {
 		.cursor__text {
-			left: -30px;
+			left: -40px;
 			top: -30px;
 			font-size: 18px;
 		}
