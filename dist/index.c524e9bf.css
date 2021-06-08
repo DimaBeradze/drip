@@ -244,7 +244,7 @@ a:focus-visible {
 
 .circles__text--3 {
 	font-size: 10.5vmin;
-	font-size: clamp(80px,10.5vmin,100px);
+	font-size: clamp(55px,6.5vmin,100px);
 	font-family: var(--font-circle-3);
 	font-weight: var(--font-weight-circle-3);
 	fill: var(--color-text-circle-3);

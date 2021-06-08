@@ -25,5 +25,8 @@
     "imagesloaded": "^4.1.4",
     "parcel": "latest",
     "splitting": "^1.0.6"
+  },
+  "devDependencies": {
+    "firebase-tools": "^9.12.1"
   }
 }
