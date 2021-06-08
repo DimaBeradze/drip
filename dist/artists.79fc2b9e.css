@@ -91,13 +91,10 @@ a:focus {
 
 .content {
 	display: flex;
-	flex-direction: column;
 	width: 100vw;
 	height: 300px;
 	justify-content: center;
-	position: relative;
-	align-items: center;
-}
+	}
 
 .grid {
 	position: absolute;
@@ -207,29 +204,25 @@ a:focus {
 	display: none;
 }
 
-/* .marquee {
-	color: #B4EE10;
-	font-size: 20px;
-	font-family: drukwide;
-	text-transform: uppercase;
-}
-
-.bottom {
-	position: absolute;
-	bottom: -4px;
-} */
-
 .marquee {
     position: relative;
     overflow: hidden;
 	width: auto;
 }
 
+.top {
+	top: 10px
+}
+
+.bottom {
+	bottom: 50px;
+}
+
 .marquee__inner {
     display: flex;
     position: relative;
     transform: translate3d(var(--move-initial), 0, 0);
-    animation: marquee 100s linear infinite;
+    animation: marquee 20s linear infinite;
 }
 
 .marquee span {
@@ -431,9 +424,6 @@ a:focus {
 			left: -30px;
 			top: -30px;
 			font-size: 18px;
-		}
-		.bottom {
-			bottom: 20px;
 		}
 	}
 }
