@@ -206,7 +206,7 @@ a:focus {
 	display: none;
 }
 
-.marquee {
+/* .marquee {
 	color: #B4EE10;
 	font-size: 20px;
 	font-family: drukwide;
@@ -216,6 +216,39 @@ a:focus {
 .bottom {
 	position: absolute;
 	bottom: -4px;
+} */
+
+
+.marquee {
+    position: relative;
+    overflow: hidden;
+	width: auto;
+}
+
+.marquee__inner {
+    display: flex;
+    position: relative;
+    transform: translate3d(var(--move-initial), 0, 0);
+    animation: marquee 100s linear infinite;
+}
+
+.marquee span {
+	color: #B4EE10;
+    font-size: 20px;
+	font-family: drukwide;
+	text-transform: uppercase;
+	white-space: nowrap;
+}
+
+
+@keyframes marquee {
+    0% {
+        transform: translate3d(0%, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-100%, 0, 0);
+    }
 }
 
 @media screen and (min-width: 53em) {
