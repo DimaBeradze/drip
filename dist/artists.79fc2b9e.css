@@ -79,7 +79,35 @@ a:focus {
 	opacity: 0.4;
 	background: var(--color-link);
 	animation: loaderAnim 0.7s linear infinite alternate forwards;
+}
 
+.marquee {
+    position: relative;
+    overflow: hidden;
+	width: auto;
+}
+
+.top {
+	top: 10px
+}
+
+.bottom {
+	bottom: 50px;
+}
+
+.marquee__inner {
+    display: flex;
+    position: relative;
+    transform: translate3d(var(--move-initial), 0, 0);
+    animation: marquee 20s linear infinite;
+}
+
+.marquee span {
+	color: #B4EE10;
+    font-size: 20px;
+	font-family: drukwide;
+	text-transform: uppercase;
+	white-space: nowrap;
 }
 
 @keyframes loaderAnim {
@@ -202,35 +230,6 @@ a:focus {
 
 .cursor {
 	display: none;
-}
-
-.marquee {
-    position: relative;
-    overflow: hidden;
-	width: auto;
-}
-
-.top {
-	top: 10px
-}
-
-.bottom {
-	bottom: 50px;
-}
-
-.marquee__inner {
-    display: flex;
-    position: relative;
-    transform: translate3d(var(--move-initial), 0, 0);
-    animation: marquee 20s linear infinite;
-}
-
-.marquee span {
-	color: #B4EE10;
-    font-size: 20px;
-	font-family: drukwide;
-	text-transform: uppercase;
-	white-space: nowrap;
 }
 
 @keyframes marquee {
