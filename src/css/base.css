@@ -192,8 +192,15 @@ a:focus-visible {
 	background-image: url("../img/icons/logo.svg");
 }
 
-.enter__text {
+.button-text {
+	font-family: drukwide;
 	position: relative;
+	bottom: -100px;
+	color: white;
+}
+
+.enter:hover .button-text {
+	display: none;
 }
 
 .js .enter {
@@ -249,4 +256,11 @@ a:focus-visible {
 	font-family: var(--font-circle-3);
 	font-weight: var(--font-weight-circle-3);
 	fill: var(--color-text-circle-3);
+}
+
+@media  screen and (max-width: 768px) {
+	.button-text {
+		bottom: 0;
+		color:  black;
+	}
 }
