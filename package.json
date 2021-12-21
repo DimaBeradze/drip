@@ -23,7 +23,7 @@
   "dependencies": {
     "gsap": "^3.6.0",
     "imagesloaded": "^4.1.4",
-    "parcel": "latest",
+    "parcel": "2.0.0-beta.3.1",
     "splitting": "^1.0.6"
   },
   "devDependencies": {

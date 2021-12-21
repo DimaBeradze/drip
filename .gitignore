@@ -3,3 +3,5 @@
 /.parcel-cache
 /.__MACOSX
 package-lock.json
+pnpm-lock.yaml
+dist
